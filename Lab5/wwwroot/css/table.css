@@ -1,0 +1,27 @@
+﻿
+main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+table {
+    margin:auto;
+    
+    table-layout: fixed;   
+}
+
+
+td  {
+    height:100px;
+    width:100px;
+    border: 2px solid black;      
+    text-align:center;   
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+td > *{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+    
