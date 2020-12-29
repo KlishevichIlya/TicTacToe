@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Lab5.Models.Game>
+@{ 
+    ViewBag.Title = "Список всех доступных игр";
+}
+
+<table class="table">
+    <tr><th>Название комнаты</th><th>Создатель</th><th></th></tr>
+    @foreach (var game in Model)
+    {
+        @if(game.isFree == false)
+        {
+            continue;
+        }
+
+        <tr>
+            <td>@game.Name</td>
+            <td>@game.Owner</td>
+            <td>
+                <form asp-action="Connect" asp-controller="Game" asp-route-id="@game.Id" method="post">                    
+                    <button type="submit" class="btn btn-sm btn-warning">
+                        Присоединиться
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>

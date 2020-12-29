@@ -1,0 +1,38 @@
+﻿@model Lab5.Models.Game
+@{
+
+    ViewBag.Title = "Игра крестики-нолики";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/css/table.css" />
+</head>
+
+<body>
+    <h1 class="text-center">Комната : @Model.Name</h1> <br>
+    <div id="chatroom"></div>
+    <table>
+        <tbody id="field">
+            <tr>
+                <td id="1"></td>
+                <td id="2"></td>
+                <td id="3"></td>
+            </tr>
+            <tr>
+                <td id="4"></td>
+                <td id="5"></td>
+                <td id="6"></td>
+            </tr>
+            <tr>
+                <td id="7"></td>
+                <td id="8"></td>
+                <td id="9"></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+</body>

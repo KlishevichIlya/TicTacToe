@@ -1,0 +1,40 @@
+﻿@model Lab5.ViewModels.RegisterViewModel
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Регистрация</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/css/registration.css" rel="stylesheet">
+
+</head>
+<body class="text-center">
+    <main class="form-signin">
+        <form method="post" asp-controller="Account" asp-action="Register">
+            <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+
+            <label asp-for="Name" hidden>Name</label>
+            <input type="text" asp-for="Name" class="form-control" placeholder="Имя" required="" autofocus="">
+
+            <label asp-for="Year" hidden>Year</label>
+            <input type="text" asp-for="Year" class="form-control" placeholder="Год рождения" required="" >
+
+            <label asp-for="Email" hidden>Email</label>
+            <input type="text" asp-for="Email" class="form-control" placeholder="Email" required="">
+
+
+            <label asp-for="Password" hidden>Password</label>
+            <input type="password" asp-for="Password" class="form-control" placeholder="Пароль" required="">
+
+            <label asp-for="PasswordConfirm" hidden>PasswordConfirm</label>
+            <input type="password" asp-for="PasswordConfirm" class="form-control marg" placeholder="Подтверите пароль" required="">
+
+
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Зарегестрироваться</button>
+            <p class="mt-5 mb-3 text-muted">© KlishevichIlya</p>
+        </form>
+    </main>
+</body>
+</html>
